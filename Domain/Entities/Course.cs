@@ -1,4 +1,4 @@
-﻿namespace StudentCourseEnrollment.Domain.Entities
+namespace StudentCourseEnrollment.Domain.Entities
 {
     public class Course
     {
@@ -9,6 +9,6 @@
         public int Credits { get; set; }
         public int MaxCapacity { get; set; }
 
-
+        public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
     }
 }
